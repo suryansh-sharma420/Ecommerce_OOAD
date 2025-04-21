@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo.frontend.MainViewController"
+            stylesheets="@../css/styles.css">
+
+    <top>
+        <HBox styleClass="header">
+            <Label text="E-Commerce Store" styleClass="header-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Login" fx:id="loginButton" styleClass="header-button"/>
+            <Button text="Cart" fx:id="cartButton" styleClass="header-button"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox fx:id="sidebar" styleClass="sidebar">
+            <Label text="Categories" styleClass="sidebar-title"/>
+            <Button text="All Products" styleClass="sidebar-button"/>
+            <Button text="Electronics" styleClass="sidebar-button"/>
+            <Button text="Clothing" styleClass="sidebar-button"/>
+            <Button text="Books" styleClass="sidebar-button"/>
+        </VBox>
+    </left>
+
+    <center>
+        <ScrollPane>
+            <GridPane fx:id="productGrid" styleClass="product-grid">
+                <!-- Product cards will be added here dynamically -->
+            </GridPane>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <HBox styleClass="footer">
+            <Label text="© 2024 E-Commerce Store" styleClass="footer-text"/>
+        </HBox>
+    </bottom>
+
+</BorderPane> 

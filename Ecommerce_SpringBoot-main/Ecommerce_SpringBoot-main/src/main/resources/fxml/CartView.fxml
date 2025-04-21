@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.demo.frontend.CartController"
+      spacing="10" alignment="CENTER">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Shopping Cart" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="cartTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="productColumn" text="Product" prefWidth="200"/>
+            <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="100"/>
+            <TableColumn fx:id="priceColumn" text="Price" prefWidth="100"/>
+            <TableColumn fx:id="totalColumn" text="Total" prefWidth="100"/>
+            <TableColumn fx:id="actionColumn" text="Action" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Label text="Total Amount: $" style="-fx-font-size: 16px;"/>
+        <Label fx:id="totalAmountLabel" text="0.00" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="continueShoppingButton" text="Continue Shopping" onAction="#onContinueShopping"/>
+        <Button fx:id="checkoutButton" text="Proceed to Checkout" 
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white;"
+                onAction="#onCheckout"/>
+    </HBox>
+</VBox> 
